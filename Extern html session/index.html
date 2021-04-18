@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Yumziee</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="Logo.png">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="slider.css">
+    <link rel="stylesheet" href="mystyle1.css">
+    <link rel="stylesheet" href="mystyle2.css">
+    <link rel="stylesheet" href="mystyle3.css">
+    <link rel="stylesheet" href="mystyle4.css">
+</head>
+
+
+
+<body>
+    <header>
+
+
+            <div class="navbar" id="navbar" style="height: 101px; display: flex;" >
+                <a href="index.html">
+                <img src="Logo.png" style="width:160px;height: 100px;"></a>
+
+                <a href="javascript:void(0);" class="icon" id="open" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <!-- <a href="javascript:void(0);" class=" " id="close" onclick="myFunction()">
+                    <i class="fa fa-times"></i>
+                </a> -->
+
+                <div class="nav" id="myTopnav">
+                    <a class="active" href="#"> HOME</a>
+                    <a href="#">ABOUT US</a>
+                    <div class="drop">
+                        <button href="#" class="dropbtn">SERVICES <i class="fa fa-caret-down"></i> </button>
+                        <div class="dropdown-content">
+                            <a href="#">Service 1</a>
+                            <a href="#">Service 2</a>
+                            <a href="#">Service 3</a>
+                        </div>
+                    </div>
+                    <a href="#">CONTACT</a>
+                    
+                </div>
+            </div>
+    </header>
+    <main>
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                
+                <img src="brooke-lark-4J059aGa5s4-unsplash.jpg" style=" width:100% ;height: 75vh;">
+
+            </div>
+
+            <div class="mySlides fade">
+                
+                <img src="brooke-lark-W9OKrxBqiZA-unsplash.jpg" style=" width:100% ;height: 75vh;">
+
+            </div>
+
+            <div class="mySlides fade">
+                
+                <img src="lily-banse--YHSwy6uqvk-unsplash.jpg" style=" width:100% ;height: 75vh;">
+
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <div style="text-align:center; padding-top: 10px;">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+        <script>
+            var slideIndex = 1;
+            showSlides();
+
+            function plusSlides(n) {
+                slideIndex+=n;
+                showSlides();
+            }
+
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {
+                    slideIndex = 1
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+                setTimeout(showSlides, 3000);
+            }
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "nav") {
+                    x.className += " mobile-nav";
+                }
+                else {
+                    x.className = "nav";
+                }
+                // var y= document.getElementsById("open");
+                // var z= document.getElementsById("close");
+                // if(y.className === "icon" && z.classname===" "){
+                //     y.className=" ";
+                //     y.style.display="none";
+                //     z.className="icon";
+                //     z.style.display="block";
+                // }
+                // else{
+                //     z.className=" ";
+                //     z.style.display="none";
+                //     y.className="icon";
+                //     y.style.display="block";
+
+                // }
+            }
+        </script>
+        <br>
+        <div class="row">
+            <div class="column">
+
+
+                <div class="card">
+                    <img src="dan-gold-4_jhDO54BYg-unsplash.jpg" alt="Avatar" style="width:100%">
+                    <div class="container">
+                        <h2 style="text-align: center;"><b>MULTICUISINE</b></h2>
+                    </div>
+                </div>
+
+            </div>
+            <div class="column">
+
+
+                <div class="card">
+                    <img src="davide-cantelli-jpkfc5_d-DI-unsplash.jpg" alt="Avatar" style="width:100%">
+                    <div class="container">
+                        <h2 style="text-align: center;"><b>BREAKFAST</b></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+
+
+                <div class="card">
+                    <img src="jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Avatar" style="width:100%">
+                    <div class="container">
+                        <h2 style="text-align: center;"><b>DINNER</b></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="map-container">
+            <div>
+                <h2 style="text-align: center;">Map</h2>
+
+                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.0851059043707!2d75.83180951488144!3d26.837245283160083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db623c639b83f%3A0xca8fdadd435afd32!2sJTM%20Mall!5e0!3m2!1sen!2sin!4v1618483332452!5m2!1sen!2sin"
+                    width="700" height="510" style="border:3px dashed rgb(245, 6, 6);" allowfullscreen="" loading="lazy"></iframe>
+
+            </div>
+            <div style="display: flex;flex-direction:column; justify-content: center; align-items: center;">
+
+                <h2 style=" text-align: center;">Contact Us</h2>
+
+                <div class="container" style="width:90%; display: flex; flex-direction: column ;justify-content: center;">
+                    <form action="#" style="border: 3px dashed rgb(245, 6, 6); padding: 20px; display:inline-block; align-items: center;">
+                        <label for="fname">First name:</label><br>
+                        <input type="text" id="fname" name="fname"><br>
+                        <label for="lname">Last name:</label><br>
+                        <input type="text" id="lname" name="lname"><br>
+                        <label for="mail">Email:</label><br>
+                        <input type="email" id="mail" name="mail" style="width: 100%;"><br>
+                        <label for="message">Message:</label><br>
+                        <textarea rows="6" cols="20" id="message" name="message" ></textarea><br>
+                        <button type="submit" id="submit" name="submit">Submit</button>
+                        <button type="reset" id="reset" name="reset">Reset</button><br>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+    </main>
+    <footer>
+
+        <div class="row" style="padding: 2rem; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr))">
+            <div class="column">
+
+                <img src="Logo.png" style="width:250px;height: 250px;">
+
+            </div>
+            <div class=" column ">
+                <h2>SERVICES</h2>
+                <h3><a href="#"> Service 1 </a></h3>
+                <h3><a href="#"> Service 2 </a></h3>
+                <h3><a href="#"> Service 3 </a></h3>
+                
+            </div>
+            <div class="column ">
+                <h2>ABOUT US</h2>
+                <p>Yumziee brings you a variety of hunger relinquishing cuisine for all those whose motive for living is to eat delicious..</p>
+                <h3>+91 XX XXXX XXXX</h3>
+                <h3> info@cafeyumziee.com</h3>
+            </div>
+            <div class=" column ">
+                <h2>Follow Us</h2>
+                <a id="demo" href="#" class="fa fa-facebook"></a>
+                <a id="demo" href="#" class="fa fa-twitter"></a>
+                <a id="demo" href="#" class="fa fa-instagram"></a>
+                <a id="demo" href="#" class="fa fa-linkedin"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
